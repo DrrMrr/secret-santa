@@ -2,21 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://drive.google.com/file/d/1CWWVKHAHp894ITiNhMoJbZoNAEs9gFow/view?usp=drive_link" id="redirect">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tonijevo voščilo</title>
+    <!-- Favicon (Santa Icon) -->
+    <link rel="icon" href="https://drive.google.com/file/d/1H64FvuPL77rOD0GQZn4ha0R8OUYKLZa2/view?usp=drive_link" type="image/png">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            border: 5px solid #ff0000;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
     <script>
-        const images = [
-            "https://drive.google.com/file/d/1CWWVKHAHp894ITiNhMoJbZoNAEs9gFow/view?usp=drive_link", 
-            "https://drive.google.com/file/d/1QroZ9-dhnSBGixB5F-CpinwgeK62WzUp/view?usp=drive_link",
-            "https://drive.google.com/file/d/1sN7gOv_csMp3b3s5hEc_fpioCZXeu7YQ/view?usp=drive_link",
-            "https://drive.google.com/file/d/1iiZEVWV57YIsNvEboHGNYAjDsH4nFxrr/view?usp=drive_link",
-            "https://drive.google.com/file/d/1oESlLE1kXH7Sjv8NL3-VhL4DGBqle5T5/view?usp=drive_link"
-        ];
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-        document.getElementById('redirect').setAttribute('content', `0; url=${randomImage}`);
-        window.location.href = randomImage;
+        window.onload = function() {
+            const images = [
+                "https://drive.google.com/file/d/1CWWVKHAHp894ITiNhMoJbZoNAEs9gFow/view?usp=drive_link", 
+                "https://drive.google.com/file/d/1QroZ9-dhnSBGixB5F-CpinwgeK62WzUp/view?usp=drive_link",
+                "https://drive.google.com/file/d/1sN7gOv_csMp3b3s5hEc_fpioCZXeu7YQ/view?usp=drive_link",
+                "https://drive.google.com/file/d/1iiZEVWV57YIsNvEboHGNYAjDsH4nFxrr/view?usp=drive_link",
+                "https://drive.google.com/file/d/1oESlLE1kXH7Sjv8NL3-VhL4DGBqle5T5/view?usp=drive_link"
+            ];
+            // Select a random image
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            // Set the image source dynamically
+            document.getElementById("image-container").src = randomImage;
+        };
     </script>
 </head>
 <body>
-    <p>Redirecting...</p>
+    <!-- Image container -->
+    <img id="image-container" alt="Tonijevo spletno voščilo">
 </body>
 </html>
