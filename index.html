@@ -27,17 +27,22 @@
                 "https://i.ibb.co/TPDzpPB/brezplacna-voscilnica-bozicek-Toni.png",
                 "https://i.ibb.co/qk8ThXp/brezplacna-voscilnica-lisicka-Toni.png",
                 "https://i.ibb.co/yq8wJxx/brezplacna-voscilnica-mesto-Toni.png",
-                "https://i.ibb.co/bX0cdpg/brezplacna-voscilnica-snezak-Toni.png"                
+                "https://i.ibb.co/bX0cdpg/brezplacna-voscilnica-snezak-Toni.png"
             ];
-            // Select a random image
             const randomImage = images[Math.floor(Math.random() * images.length)];
-            // Set the image source dynamically
             document.getElementById("image-container").src = randomImage;
+
+            // Hidden counter using localStorage
+            const visitCount = localStorage.getItem('visitCount');
+            let newCount = visitCount ? parseInt(visitCount) + 1 : 1;
+            localStorage.setItem('visitCount', newCount);
+
+            // Log the counter to the browser console
+            console.log(`You have visited this page ${newCount} times.`);
         };
     </script>
 </head>
 <body>
-    <!-- Image container -->
     <img id="image-container" alt="Tonijevo božično voščilo">
 </body>
 </html>
