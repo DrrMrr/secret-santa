@@ -27,20 +27,17 @@
                 "https://i.ibb.co/TPDzpPB/brezplacna-voscilnica-bozicek-Toni.png",
                 "https://i.ibb.co/qk8ThXp/brezplacna-voscilnica-lisicka-Toni.png",
                 "https://i.ibb.co/yq8wJxx/brezplacna-voscilnica-mesto-Toni.png",
-                "https://i.ibb.co/bX0cdpg/brezplacna-voscilnica-snezak-Toni.png"
+                "https://i.ibb.co/bX0cdpg/brezplacna-voscilnica-snezak-Toni.png"                
             ];
+            // Select a random image
             const randomImage = images[Math.floor(Math.random() * images.length)];
+            // Set the image source dynamically
             document.getElementById("image-container").src = randomImage;
-
-            // Global Counter Using CountAPI
-            fetch("https://api.countapi.xyz/hit/drrmrr-secret-santa/visits")
-                .then(res => res.json())
-                .then(data => console.log(`Global visit count: ${data.value}`))
-                .catch(err => console.error("Counter error:", err));
         };
     </script>
 </head>
 <body>
+    <!-- Image container -->
     <img id="image-container" alt="Tonijevo božično voščilo">
 </body>
 </html>
